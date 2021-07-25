@@ -1,10 +1,12 @@
 def trailingZeroes(n):
-    if n==0:
-        return 1
-    return n//5
+    count=0
+    while(n>=5):
+        n=n//5
+        count+=n
+    print(count)
 
 # DO NOT CHANGE ANYTHING BELOW THIS LINE
 num_tests=int(input())
 for _ in range(num_tests):
     n=int(input())
-    print(trailingZeroes(n))
+    trailingZeroes(n)
